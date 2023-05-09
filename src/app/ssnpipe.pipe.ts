@@ -14,7 +14,7 @@ export class SsnpipePipe implements PipeTransform {
     if (!showMask || value.length <10) {
       return value;
     }
-    return "XXX-XX-" + value.substr(5, 4);
+    return "XXX-XX-" + value.substr(0, value.length - 6);
   }
 
 }
