@@ -1,0 +1,10 @@
+<h1>Custom Pipe SSN</h1>
+<form [formGroup]="abcform">
+  <input type="text" formControlName="ssn"  (click)="showMask = !showMask" (ngModelChange)="xyz($event)" [ngModel]="ssn2 | ssnpipe:showMask" >
+</form>
+<!-- <input type="text" (blur)="showMask = true" (click)="showMask = !showMask" name="value" > -->
+
+<!-- <p>real value: {{ abcform.value|json }}</p>
+<input type="text" (blur)="showMask = true" (click)="showMask = !showMask" name="value" (ngModelChange)="value = $event" [ngModel]="value | ssnpipe:showMask">
+
+<p>real value: {{ value |ssnpipe:showMask }}</p> -->
